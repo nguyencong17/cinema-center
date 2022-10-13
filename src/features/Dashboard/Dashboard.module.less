@@ -1,0 +1,119 @@
+#main {
+  .mainSidebar {
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    // Title
+    h2 {
+      color: @white;
+      font-size: calc(@font-size-base * 2);
+    }
+
+    //Logo
+    .logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: calc(2 * @margin-lg);
+      img {
+        max-width: 50px;
+        margin-right: calc(@padding-lg/3);
+      }
+
+      p {
+        font-size: @font-size-base * 1.8rem;
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        span {
+          color: @btn-primary-bg;
+          margin-left: calc(@margin-lg/8);
+        }
+      }
+    }    
+    
+    // Navigation
+    :global {
+      .ant-layout-sider-children {
+        padding: @padding-lg;
+        border-right: 1px solid rgb(58 57 57);
+
+        :global {
+
+        }
+
+        // Menu
+        .ant-menu {
+          background-color: transparent !important;
+    
+          .ant-menu-item {
+            padding-left: 20px !important;
+            font-size: calc(@font-size-base * 1.8);
+            margin: calc(@margin-lg/2) 0;
+            .anticon {
+              font-size: calc(@font-size-base *1.8);
+            }
+          }
+
+          .ant-menu-item-selected {
+            background-color: transparent;
+            color: @btn-primary-bg;
+          }
+        }
+      }      
+    }
+  }
+
+    .sidebarLeft {
+      width: 260px !important;
+      max-width: 260px !important;
+      flex-basis: 260px !important;
+        :global {
+      // Navigation
+      .ant-layout-sider-children {
+        padding: @padding-lg 0 @padding-lg @padding-lg; 
+        border-right: 1px solid rgb(58 57 57);
+      }
+    }
+  }
+    
+  .sidebarRight {
+    width: 300px !important;
+    max-width: 300px !important;
+    flex-basis: 300px !important;
+
+    // Navigation
+    :global {
+      .ant-layout-sider-children {
+        padding: @padding-lg; 
+        border-left: 1px solid rgb(58 57 57);
+      }
+    }
+  }
+
+  .mainContent {
+    .mainHeader {
+      
+      :global {
+        .ant-menu {
+          background-color: transparent;
+          border-bottom: 0;
+          .ant-menu-item {
+            font-size: calc(@font-size-base * 1.8);
+            & > * , a {
+              color: @white;
+            }
+            .anticon {
+              font-size: calc(@font-size-base * 1.8);
+            }
+          }
+        }
+      }
+    }
+    .mainShow {
+      background-color: transparent;
+      padding: @padding-lg;
+    }
+  }
+}

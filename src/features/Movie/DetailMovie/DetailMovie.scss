@@ -1,0 +1,127 @@
+// .content{
+  
+// }
+
+.wrap-thumbnail {
+  position: relative;
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient( to top, rgba(0,0,0,.7) , rgba(30, 29, 29, 0.1));
+  }
+  .thumbnail-img .ant-image{
+    height: 450px;
+    overflow: hidden;
+  
+//     img {
+//       height: 100%;
+//       width: 100%;
+//       object-fit: cover;
+//       object-position: top center;
+//     }
+  }
+}
+
+.detail-wrap{
+  display: flex;
+  padding: 0 15rem;
+  margin-top: -30rem;
+  align-items: center;
+  position: relative;
+  @media screen and (max-width: 1200px) {
+    padding: 0 5rem;
+  }
+
+  .left{
+    flex-basis: 30%;
+  }
+
+  .right{
+    flex-basis: 70%;
+    padding: 24px;
+
+    > * {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  .title {
+    font-size: 3.6rem;
+    line-height: 4.8rem;
+    margin-bottom: .8rem;
+    letter-spacing: -0.02em;
+  }
+
+  .sub-title {
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    line-height: 3.2rem;
+    margin: 0;
+  }
+
+  .status{
+
+  }
+  .budget{
+  
+  }
+  .revenue{
+  
+  }
+  .language{
+  
+  }
+  
+  .vote{
+    > i {
+      margin-right: .8rem;
+      color: yellow;
+    }
+
+    > span {
+      margin-left: .8rem;
+    }
+  }
+  .flex{
+  
+  }
+  .release-date{
+  margin-right: 1.6rem;
+  }
+  .run-time{
+  
+  }
+  .genres{
+    > li {
+      padding-right: .8rem;
+
+      a {
+        padding: 10px 23px;
+        border: 1px solid #eee;
+        border-radius: 8px;
+      }
+    }
+  }
+  .summary {
+    margin-top: 6rem;
+
+    h4 {
+      font-size: 2.8rem;
+      margin-bottom: 1.6rem;
+    }
+  }
+  .list-none{
+  
+  }
+
+  .watch-trailer {
+    background-color: #000;
+    padding: 1.6rem 3.2rem;
+    margin-top: 3.2rem;
+  }
+}
